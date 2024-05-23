@@ -1,6 +1,7 @@
+import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import FloatingNavbar from "@/components/ui/FloatingNavbar";
-import { navItems } from "@/constant";
+import { navItems } from "@/data";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
           navItems={navItems}
         />
         <Hero />
+        <Grid />
       </div>
     </main>
   );
