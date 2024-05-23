@@ -1,13 +1,13 @@
-import Image from "next/image";
-
 import Hero from "@/components/Hero";
+import FloatingNavbar from "@/components/ui/FloatingNavbar";
+import { navItems } from "@/constant";
 
-export default function Home() {
+const Home = () => {
   return (
     <main
       className="
         relative 
-        bg-black-100 
+        dark:bg-black-100 bg-white
         flex items-center justify-center flex-col 
         overflow-hidden 
         mx-auto 
@@ -17,8 +17,13 @@ export default function Home() {
       <div 
         className="max-x-7xl w-full"
       >
+        <FloatingNavbar 
+          navItems={navItems}
+        />
         <Hero />
       </div>
     </main>
   );
 }
+
+export default Home;

@@ -1,21 +1,29 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ThemeProvider from "@/components/theme-provider";
 
 
 export const metadata: Metadata = {         
   title: "Night Portfolio",
   description: "Modern & Minimalist",
 };
-
+// TypeError: originalFactory is undefined
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        {children}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
