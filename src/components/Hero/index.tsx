@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
 
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 import MagicButton from '@/components/ui/MagicButton';
@@ -10,8 +9,6 @@ import SpotLights from './SpotLights';
 import { FaLocationArrow } from 'react-icons/fa6';
 
 const Hero = () => {
-  const {theme} = useTheme();
-  console.log("Hero Theme: ", theme);
   
   return (
     <div className="pb-20 pt-36">
