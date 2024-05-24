@@ -1,4 +1,7 @@
+import Approach from "@/components/Approach";
 import Clients from "@/components/Clients";
+import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
@@ -11,8 +14,8 @@ const Home = () => {
       className="
         relative 
         dark:bg-black-100 bg-white
-        flex items-center justify-center flex-col 
-        overflow-hidden 
+        flex items-center justify-center flex-col overflow-clip
+        
         mx-auto 
         sm:px-10 px-5
       "
@@ -27,6 +30,9 @@ const Home = () => {
         <Grid />
         <RecentProjects />
         <Clients />
+        <Experience />
+        <Approach />
+        <Footer />
       </div>
     </main>
   );

@@ -70,6 +70,7 @@ const FloatingNavbar:FC<FloatingNavbarProps> = ({
           border border-transparent dark:border-white/[0.2] 
           rounded-lg 
           dark:bg-black/75 bg-white 
+          !text-white
           shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] 
           z-[5000] 
           px-8 py-3  
@@ -86,7 +87,7 @@ const FloatingNavbar:FC<FloatingNavbarProps> = ({
               `relative 
               items-center flex 
               space-x-1
-              
+              sm:text-white
               dark:text-neutral-50
               text-neutral-600 
               dark:hover:text-neutral-300 
@@ -96,7 +97,7 @@ const FloatingNavbar:FC<FloatingNavbarProps> = ({
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
+            <span className="text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
 
