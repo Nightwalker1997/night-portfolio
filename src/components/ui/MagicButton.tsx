@@ -20,8 +20,8 @@ const MagicButton:React.FC<MagicButtonProps> = ({
   return (
     <div>
       <button 
+        onClick={handleClick}
         className="
-        
           bg-slate-800 
           no-underline 
           group 
